@@ -15,8 +15,8 @@ var winningScore = 100;
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
-  createItem(375, 400, 'poison');
-  createItem(575, 500, 'poison');
+  createItem(375, 400, 'coin');
+  createItem(575, 500, 'coin');
   createItem(225, 500, 'coin');
   createItem(100, 250, 'coin');
   createItem(575, 150, 'coin');
@@ -24,7 +24,7 @@ function addItems() {
   createItem(650, 250, 'coin');
   createItem(225, 200, 'coin');
   createItem(375, 100, 'poison');
-  createItem(370,500, 'poison');
+  createItem(370,500,'poison');
   createItem(100, 375, 'poison');
   createItem(125, 50, 'star');
 }
@@ -65,11 +65,11 @@ function createBadge() {
 function itemHandler(player, item) {
   item.kill();
   if (item.key === 'coin') {
-     currentScore = currentScore + 1000;
+     currentScore = currentScore + 10;
   } else if (item.key === 'poison') {
-     currentScore = currentScore - 50000;
+     currentScore = currentScore - 25;
   } else if (item.key === 'star') {
-     currentScore = currentScore + 2500;
+     currentScore = currentScore + 25;
   }
   if (currentScore === winningScore) {
       createBadge();
