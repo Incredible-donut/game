@@ -20,9 +20,9 @@ function addItems() {
   createItem(225, 500, 'coin');
   createItem(100, 250, 'coin');
   createItem(575, 150, 'coin');
-  createItem(525, 300, 'coin');
-  createItem(650, 250, 'coin');
-  createItem(225, 200, 'coin');
+  createItem(525, 300, 'poison');
+  createItem(650, 250, 'poison');
+  createItem(225, 200, 'poison');
   createItem(375, 100, 'poison');
   createItem(370,500,'poison');
   createItem(100, 375, 'poison');
