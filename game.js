@@ -21,7 +21,6 @@ function addItems() {
   createItem(100, 250, 'coin');
   createItem(575, 150, 'coin');
   createItem(525, 300, 'poison');
-  createItem(650, 250, 'poison');
   createItem(225, 200, 'poison');
   createItem(375, 100, 'poison');
   createItem(370,500,'poison');
@@ -36,10 +35,12 @@ function addPlatforms() {
   platforms.create(0, 100, 'platform2');
   platforms.create(0, 200, 'platform2');
   platforms.create(600, 200, 'platform2');
+  platforms.create(400, 50, 'platform2');
   platforms.create(300, 0, 'platform');
   platforms.create(300, 100, 'platform2');
   platforms.create(300, 400, 'platform2');
   platforms.create(100, 100, 'platform2');
+  platforms.create(600, 500, 'platform2');
   platforms.setAll('body.immovable', true);
 }
 
