@@ -13,38 +13,32 @@ var currentScore = 0;
 var winningScore = 100;
 
 // add collectable items to the game
-function addItems() {
-  items = game.add.physicsGroup();
-  createItem(375, 400, 'coin');
-  createItem(575, 500, 'coin');
-  createItem(225, 500, 'coin');
-  createItem(100, 250, 'coin');
+function addItems() { 
+  items = game.add.physicsGroup(); 
+  createItem(375, 350, 'coin');
+  createItem(550, 500, 'coin');
+  createItem(225, 500, 'coin'); 
+  createItem(100, 250, 'coin'); 
   createItem(575, 150, 'coin');
-  createItem(525, 300, 'coin');
-  createItem(650, 250, 'coin');
-  createItem(225, 200, 'coin');
+  createItem(525, 300, 'poison');
+  createItem(225, 200, 'poison'); 
   createItem(375, 100, 'poison');
-  createItem(370,500,'poison');
+  createItem(370,500,'poison'); 
   createItem(100, 375, 'poison');
-  createItem(125, 50, 'star');
-}
-
+  createItem(125, 50, 'star'); }
 // add platforms to the game
-function addPlatforms() {
-  platforms = game.add.physicsGroup();
-  platforms.create(450, 550, 'platform');
-  platforms.create(100, 550, 'platform');
-  platforms.create(300, 450, 'platform');
-  platforms.create(250, 150, 'platform');
-  platforms.create(50, 300, 'platform');
-  platforms.create(150, 250, 'platform');
-  platforms.create(650, 300, 'platform');
-  platforms.create(550, 200, 'platform2');
-  platforms.create(300, 450, 'platform2');
-  platforms.create(400, 350, 'platform2');
+function addPlatforms() { 
+  platforms = game.add.physicsGroup(); 
+  platforms.create(600, 0, 'platform'); 
+  platforms.create(600, 200, 'platform2');
+  platforms.create(400, 270, 'platform2');
+  platforms.create(300, 0, 'platform'); 
+  platforms.create(300, 100, 'platform2');
+  platforms.create(300, 400, 'platform2');
   platforms.create(100, 100, 'platform2');
-  platforms.setAll('body.immovable', true);
-}
+  platforms.create(600, 500, 'platform2');
+  platforms.setAll('body.immovable', true); 
+} 
 
 // create a single animated item and add to screen
 function createItem(left, top, image) {
