@@ -63,12 +63,13 @@ function itemHandler(player, item) {
   if (item.key === 'coin') {
      currentScore = currentScore + 10000;
   } else if (item.key === 'poison') {
-     location.reload() // window.location.reload()
+     setTimeout( location.reload(), 500);
+    
   } else if (item.key === 'star') {
      currentScore = currentScore + 75000;
   }
 }
-
+function restart(player, item) {
 // when the player collects the badge at the end of the game
 function badgeHandler(player, badge) {
   badge.kill();
