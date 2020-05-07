@@ -39,7 +39,7 @@ function addPlatforms() {
   platforms.create(300, 400, 'platform2');
   platforms.create(100, 100, 'platform2');
   platforms.create(600, 500, 'platform2');
-  platforms.setAll('body.immovable', true);
+  platforms.setAll('body.immovable',3 true);
 }
 
 // create a single animated item and add to screen
@@ -148,7 +148,7 @@ window.onload = function () {
     }
     // when the player win the game
 
-  }
+  
 
   function render() {
 
