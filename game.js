@@ -147,6 +147,9 @@ window.onload = function () {
     if (won) {
       winningMessage.text = "YOU WIN!!!";
     }
+    if (currentScore === winningScore) {
+      alert('YOU WON!!!'); 
+    }
   }
 
   function render() {
