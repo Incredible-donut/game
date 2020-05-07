@@ -63,7 +63,7 @@ function itemHandler(player, item) {
   if (item.key === 'coin') {
      currentScore = currentScore + 10000;
   } else if (item.key === 'poison') {
-     currentScore = currentScore - 25000;
+     location.reload() // window.location.reload()
   } else if (item.key === 'star') {
      currentScore = currentScore + 75000;
   }
