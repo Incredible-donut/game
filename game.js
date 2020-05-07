@@ -73,12 +73,13 @@ function restart(player, item) {
 function badgeHandler(player, badge) {
   badge.kill();
   won = true;
+  }
 }
 
 // setup game when the web page loads
 window.onload = function () {
   game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
-  
+}
   // before the game begins
   function preload() {
     game.stage.backgroundColor = '#5db1ad';
@@ -149,8 +150,9 @@ window.onload = function () {
 
   }
 
-  function render() {
+
+
+    function render() {
 
   }
-}
-}
+
