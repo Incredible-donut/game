@@ -67,9 +67,6 @@ function itemHandler(player, item) {
   } else if (item.key === 'star') {
      currentScore = currentScore + 75000;
   }
-  if (currentScore === winningScore) {
-      createBadge();
-  }
 }
 
 // when the player collects the badge at the end of the game
@@ -145,10 +142,11 @@ window.onload = function () {
     if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down)) {
       player.body.velocity.y = -400;
     }
-    // when the player winw the game
-    if (won) {
-      winningMessage.text = "YOU WIN!!!";
+    if (currentScore === winningScore) {
+     alert('YOU WON!!!');
     }
+    // when the player win the game
+
   }
 
   function render() {
