@@ -26,4 +26,4 @@ async function update(){
       })
     });
 }
-/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=10000`) */
+/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=100`) */
