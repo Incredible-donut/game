@@ -6,14 +6,15 @@ var sendBtn = document.getElementById("send-btn");
 
 sendBtn.addEventListener('click', sendLetter);
 
+update();
 var clientMessage = '';
 var clientName = '';
 
-update();
 
 async function update(){
+
   var clientName = nameVal.value;
-  var clientMessage = 'Email: ' + emailVal.value + 'Letter: ' + letterVal.value + 'Lang: En';
+  var clientMessage = `Email: ${emailVal.value} Letter: ${letterVal.value}`;
   update = setInterval(update, 500);
 }
  function sendLetter(){
