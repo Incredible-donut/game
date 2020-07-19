@@ -7,23 +7,23 @@ var sendBtn = document.getElementById("send-btn");
 sendBtn.addEventListener('click', sendLetter);
 
 update();
-var clientMessage = String('');
-var clientName = String('');
-
-
 async function update(){
-
+  var clientMessage = String('');
+  var clientName = String('');
   var clientName = nameVal.value;
   var clientMessage = `Email: ${emailVal.value} Letter: ${letterVal.value}`;
   update = setInterval(update, 500);
 }
  function sendLetter(){
- fetch('https://fchatiavi.herokuapp.com/send/iytterroomone', {
+   var clientNameForSending = String(clientName);
+   var clientMessageForSending = String(clientMessage);
+ fetch('https://fchatiavi.herokuapp.com/send/iytter', {
    method: 'POST',
    body: JSON.stringify({
-   Name: `${clientName}`,
-   Message: `${clientMessage}`,
+   Name: clientNameForSending,
+   Message: clientMessageForSending,
       })
     });
 }
 /*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=10000`) */
+
