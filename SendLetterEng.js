@@ -21,8 +21,8 @@ async function update(){
  fetch('https://fchatiavi.herokuapp.com/send/iytter', {
    method: 'POST',
    body: JSON.stringify({
-   Name: clientName,
-   Message: clientMessage
+   Name: clientName.value,
+   Message: clientMessage.value
       })
     });
 }
