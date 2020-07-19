@@ -7,8 +7,8 @@ var sendBtn = document.getElementById("send-btn");
 sendBtn.addEventListener('click', sendLetter);
 
 update();
-var clientMessage = '';
-var clientName = '';
+var clientMessage = String('');
+var clientName = String('');
 
 
 async function update(){
@@ -18,7 +18,7 @@ async function update(){
   update = setInterval(update, 500);
 }
  function sendLetter(){
- fetch('https://fchatiavi.herokuapp.com/send/iytter', {
+ fetch('https://fchatiavi.herokuapp.com/send/iytterroomone', {
    method: 'POST',
    body: JSON.stringify({
    Name: `${clientName}`,
@@ -26,4 +26,4 @@ async function update(){
       })
     });
 }
-/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=100`) */
+/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=10000`) */
