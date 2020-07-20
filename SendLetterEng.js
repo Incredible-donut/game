@@ -6,22 +6,17 @@ var sendBtn = document.getElementById("send-btn");
 
 sendBtn.addEventListener('click', sendLetter);
 
-update();
-async function update(){
-  var clientMessage = String('');
-  var clientName = String('');
-  var clientName = nameVal.value;
-  var clientMessage = `Email: ${emailVal.value} Letter: ${letterVal.value}`;
-  update = setInterval(update, 500);
-}
+sendLetter();
  function sendLetter(){
-   var clientNameForSending = String(clientName);
-   var clientMessageForSending = String(clientMessage);
+    var clientName = '';
+    clientName = nameVal.value;
+    var clientMessage = '';
+    clientMessage = `Email: ${emailVal.value} Letter: ${letterVal.value}`;
  fetch('https://fchatiavi.herokuapp.com/send/iytter', {
    method: 'POST',
    body: JSON.stringify({
-   Name: clientNameForSending,
-   Message: clientMessageForSending,
+   Name: clientMessage,
+   Message: clientName,
       })
     });
 }
