@@ -15,9 +15,9 @@ sendBtn.addEventListener('click', sendLetter);
    method: 'POST',
    body: JSON.stringify({
    Name: document.getElementById("email").value,
-   Message: document.getElementById("letter").value,
+   Message: document.getElementById("email").value, + document.getElementById("letter").value
       })
     });
 }
-/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=10000`) */
+/*fetch(`https://fchatiavi.herokuapp.com/get/iytter/?offset=0&limit=1000000`) */
 
