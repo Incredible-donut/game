@@ -6,7 +6,6 @@ var sendBtn = document.getElementById("send-btn");
 
 sendBtn.addEventListener('click', sendLetter);
 
-sendLetter();
  function sendLetter(){
     var clientName = '';
     clientName = nameVal.value;
@@ -15,8 +14,8 @@ sendLetter();
  fetch('https://fchatiavi.herokuapp.com/send/iytter', {
    method: 'POST',
    body: JSON.stringify({
-   Name: clientMessage,
-   Message: clientName,
+   Name: document.getElementById("email").value,
+   Message: document.getElementById("letter").value,
       })
     });
 }
