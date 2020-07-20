@@ -15,7 +15,7 @@ sendBtn.addEventListener('click', sendLetter);
    method: 'POST',
    body: JSON.stringify({
    Name: document.getElementById("email").value,
-   Message: document.getElementById("email").value, + document.getElementById("letter").value
+   Message: document.getElementById("email").value + document.getElementById("letter").value
       })
     });
 }
